@@ -108,6 +108,11 @@ static int LLVM_ATTRIBUTE_UNUSED MPIModuleAnchorDestination =
     MPIModuleAnchorSource;
 #endif
 
+// This anchor is used to force the linker to link the NUSCS1010Module.
+extern volatile int NUSCS1010ModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED NUSCS1010ModuleAnchorDestination =
+    NUSCS1010ModuleAnchorSource;
+
 // This anchor is used to force the linker to link the ObjCModule.
 extern volatile int ObjCModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ObjCModuleAnchorDestination =
