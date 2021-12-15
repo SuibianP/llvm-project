@@ -9,6 +9,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "ForbiddenTypesCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -19,6 +20,8 @@ namespace nuscs1010 {
 class NUSCS1010Module : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<ForbiddenTypesCheck>(
+        "nuscs1010-forbidden-types");
     CheckFactories.registerCheck<readability::BracesAroundStatementsCheck>(
         "nuscs1010-braces-around-statements");
   }
