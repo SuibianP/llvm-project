@@ -12,6 +12,7 @@ add_clang_library(clangTidyNUSCS1010Module
   NoIncrDecrOperatorsCheck.cpp
   NoNestedTernaryOperatorCheck.cpp
   NoPrintfScanfCheck.cpp
+  NoStaticStorageVariablesCheck.cpp
   NoSwitchCheck.cpp
 
   LINK_LIBS
