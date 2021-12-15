@@ -10,6 +10,7 @@
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
 #include "ForbiddenTypesCheck.h"
+#include "NoBreakCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -22,6 +23,7 @@ public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
     CheckFactories.registerCheck<ForbiddenTypesCheck>(
         "nuscs1010-forbidden-types");
+    CheckFactories.registerCheck<NoBreakCheck>("nuscs1010-no-break");
     CheckFactories.registerCheck<readability::BracesAroundStatementsCheck>(
         "nuscs1010-braces-around-statements");
   }
