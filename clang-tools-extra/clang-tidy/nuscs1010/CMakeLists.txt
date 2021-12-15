@@ -7,6 +7,7 @@ add_clang_library(clangTidyNUSCS1010Module
   ForbiddenTypesCheck.cpp
   NUSCS1010TidyModule.cpp
   NoBreakCheck.cpp
+  NoContinueCheck.cpp
 
   LINK_LIBS
   clangTidy
