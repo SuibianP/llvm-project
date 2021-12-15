@@ -13,6 +13,7 @@
 #include "NoBreakCheck.h"
 #include "NoContinueCheck.h"
 #include "NoGotoCheck.h"
+#include "NoIncrDecrOperatorsCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -30,6 +31,8 @@ public:
     CheckFactories.registerCheck<NoGotoCheck>("nuscs1010-no-goto");
     CheckFactories.registerCheck<readability::BracesAroundStatementsCheck>(
         "nuscs1010-braces-around-statements");
+    CheckFactories.registerCheck<NoIncrDecrOperatorsCheck>(
+        "nuscs1010-no-incr-decr-operators");
   }
 };
 
