@@ -8,6 +8,7 @@ add_clang_library(clangTidyNUSCS1010Module
   NUSCS1010TidyModule.cpp
   NoBreakCheck.cpp
   NoContinueCheck.cpp
+  NoGotoCheck.cpp
 
   LINK_LIBS
   clangTidy

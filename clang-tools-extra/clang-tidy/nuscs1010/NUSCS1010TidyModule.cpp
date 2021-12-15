@@ -12,6 +12,7 @@
 #include "ForbiddenTypesCheck.h"
 #include "NoBreakCheck.h"
 #include "NoContinueCheck.h"
+#include "NoGotoCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -26,6 +27,7 @@ public:
         "nuscs1010-forbidden-types");
     CheckFactories.registerCheck<NoBreakCheck>("nuscs1010-no-break");
     CheckFactories.registerCheck<NoContinueCheck>("nuscs1010-no-continue");
+    CheckFactories.registerCheck<NoGotoCheck>("nuscs1010-no-goto");
     CheckFactories.registerCheck<readability::BracesAroundStatementsCheck>(
         "nuscs1010-braces-around-statements");
   }
