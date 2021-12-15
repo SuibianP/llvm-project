@@ -14,6 +14,7 @@
 #include "NoContinueCheck.h"
 #include "NoGotoCheck.h"
 #include "NoIncrDecrOperatorsCheck.h"
+#include "NoNestedTernaryOperatorCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -33,6 +34,8 @@ public:
         "nuscs1010-braces-around-statements");
     CheckFactories.registerCheck<NoIncrDecrOperatorsCheck>(
         "nuscs1010-no-incr-decr-operators");
+    CheckFactories.registerCheck<NoNestedTernaryOperatorCheck>(
+        "nuscs1010-no-nested-ternary-operator");
   }
 };
 

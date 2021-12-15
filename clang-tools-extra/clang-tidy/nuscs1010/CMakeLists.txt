@@ -10,6 +10,7 @@ add_clang_library(clangTidyNUSCS1010Module
   NoContinueCheck.cpp
   NoGotoCheck.cpp
   NoIncrDecrOperatorsCheck.cpp
+  NoNestedTernaryOperatorCheck.cpp
 
   LINK_LIBS
   clangTidy
