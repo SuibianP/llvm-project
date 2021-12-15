@@ -16,6 +16,7 @@
 #include "NoIncrDecrOperatorsCheck.h"
 #include "NoNestedTernaryOperatorCheck.h"
 #include "NoPrintfScanfCheck.h"
+#include "NoSwitchCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -39,6 +40,7 @@ public:
         "nuscs1010-no-incr-decr-operators");
     CheckFactories.registerCheck<NoNestedTernaryOperatorCheck>(
         "nuscs1010-no-nested-ternary-operator");
+    CheckFactories.registerCheck<NoSwitchCheck>("nuscs1010-no-switch");
   }
 };
 
