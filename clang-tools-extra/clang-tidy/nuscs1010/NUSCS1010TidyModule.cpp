@@ -15,6 +15,7 @@
 #include "NoGotoCheck.h"
 #include "NoIncrDecrOperatorsCheck.h"
 #include "NoNestedTernaryOperatorCheck.h"
+#include "NoPrintfScanfCheck.h"
 
 #include "../readability/BracesAroundStatementsCheck.h"
 
@@ -30,6 +31,8 @@ public:
     CheckFactories.registerCheck<NoBreakCheck>("nuscs1010-no-break");
     CheckFactories.registerCheck<NoContinueCheck>("nuscs1010-no-continue");
     CheckFactories.registerCheck<NoGotoCheck>("nuscs1010-no-goto");
+    CheckFactories.registerCheck<NoPrintfScanfCheck>(
+        "nuscs1010-no-printf-scanf");
     CheckFactories.registerCheck<readability::BracesAroundStatementsCheck>(
         "nuscs1010-braces-around-statements");
     CheckFactories.registerCheck<NoIncrDecrOperatorsCheck>(
